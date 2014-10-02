@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  get 'static_pages/welcome', to: 'static_pages#welcome'
+
+  root to: 'static_pages#welcome'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
